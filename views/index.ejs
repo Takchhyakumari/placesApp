@@ -1,0 +1,37 @@
+<%- include("../partials/header")%>
+<div class="container">
+	<div class="row text-center" style="display: flex; flex-wrap: wrap;">
+		<% blog.forEach(function(blog){ %>
+		<div class="col-md-3 col-sm-6">
+			<div class="thumbnail">
+				<img class="img-responsive" src="<%= blog.img %>">
+				<div class="caption">
+					<h4><strong><%= blog.name %></strong></h4>
+				</div>
+				<div class="caption-full">
+				<div class="well">
+					<i><%= blog.description %></i>
+				</div>
+				<p>
+					<form action="/<%=blog._id%>/edit" method="get">
+					 <button class="btn btn-info">
+						Edit
+					 </button>
+					</form>
+				<p>
+					<form id="deleteForm" action="/<%=blog._id%>?_method=delete" method="post">
+						<button class="btn btn-sm btn-danger">
+							Delete
+						</button>
+					</form>
+					</p>
+				</p>
+		</div>
+			</div>
+		</div>
+	<% }); %>
+	</div>
+</div>
+
+
+<%- include("../partials/footer")%>

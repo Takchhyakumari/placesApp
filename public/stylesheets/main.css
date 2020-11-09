@@ -1,0 +1,24 @@
+body{
+	background-color: lightgoldenrodyellow;
+}
+.thumbnail img{
+	width: 100%;
+	padding: 0;
+}
+.thumbnail {
+	padding: 0px;
+}
+.thumbnail .caption-full{
+	padding: 20px;
+}
+.well{
+	background-color: lighter;
+}
+#deleteForm{
+	display: inline;
+}
+
+
+
+
+
